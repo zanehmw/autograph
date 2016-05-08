@@ -19,7 +19,7 @@
      url += "&paginationInput.entriesPerPage=20";
      url += "&CategoryID=6001";
 
-     $http.jsonp(url).success(function(res){
+    return $http.jsonp(url).success(function(res){
       var cars = res.findItemsByKeywordsResponse[0].searchResult[0].item || [];
 
       console.log("Car List");
@@ -40,9 +40,12 @@
       newUrl += "&REST-PAYLOAD";
       newUrl += urlList;
 
-      console.log(newUrl)
+      console.log(newUrl);
 
-      $http.jsonp(newUrl).success(function(finalItems){console.log(finalItems);});
+      $http.jsonp(newUrl).success(function(finalItems){
+        console.log(finalItems.Item);
+        finalItems.Item;
+      });
     });
   }
 }());

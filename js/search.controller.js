@@ -4,14 +4,12 @@
   angular
   .module("carGraphingApp")
   .controller("searchController", [
-  "SearchFactory",
-  "CarFactory",
   "$http",
   SearchControllerFunction]);
 
-  function SearchControllerFunction(searchFactory, carFactory, $http){
+  function SearchControllerFunction( $http){
     var searchVm = this;
-    searchFactory();
-}
+
+  }
 
 }());
