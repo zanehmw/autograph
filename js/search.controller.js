@@ -7,7 +7,7 @@
   "$http",
   SearchControllerFunction]);
 
-  function SearchControllerFunction( $http){
+  function SearchControllerFunction($http){
     var searchVm = this;
 
   }

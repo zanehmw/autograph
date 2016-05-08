@@ -23,7 +23,7 @@
       var cars = res.findItemsByKeywordsResponse[0].searchResult[0].item || [];
 
       console.log("Car List");
-      console.log(cars);
+      // console.log(cars);
 
       var urlList = '&itemID=';
       for(var i = 0; i < cars.length; i++){
@@ -40,11 +40,11 @@
       newUrl += "&REST-PAYLOAD";
       newUrl += urlList;
 
-      console.log(newUrl);
+      // console.log(newUrl);
 
       $http.jsonp(newUrl).success(function(finalItems){
-        console.log(finalItems.Item);
-        finalItems.Item;
+        // console.log(finalItems.Item);
+        return finalItems.Item;
       });
     });
   }
