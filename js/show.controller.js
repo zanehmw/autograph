@@ -4,20 +4,17 @@
   angular
   .module("carGraphingApp")
   .controller("carShowController", [
-    "SearchFactory",
+    "DetailsFactory",
     "$http",
     carShowControllerFunction
   ]);
 
-  function carShowControllerFunction(SearchFactory, $http) {
+  function carShowControllerFunction(DetailsFactory, $http) {
     var carShowVm = this;
-    console.log("Boop Bip Bip Boop");
-    // this is not working b/c query requires $resource, not $http
-    SearchFactory
-      .success(function(res){
-      carShowVm.cars = res.data
+    DetailsFactory
+      .then(function(res){
+        carShowVm.cars = res.data
+        console.log(carShowVm.cars)
     })
-
-    console.log(carShowVm.cars)
   }
 }());
