@@ -30,7 +30,7 @@
       series: [{
         type: 'line',
         name: 'Average Market Value',
-        data: [[0, 1.11], [200000, 200000]], //function here
+        data: [[0, 1.11], [200000, 200000]], //line of best fit function goes here
         marker: {
           enabled: false
         },
@@ -43,7 +43,7 @@
       }, {
         type: 'scatter',
         name: 'Cars',
-        data: [1, 1.5, 2.8, 3.5, 3.9, 4.2], //
+        data: [1000, 3000, 30000, 180000, 145, 4.2], //
         marker: {
           radius: 4
         }
