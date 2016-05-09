@@ -14,7 +14,6 @@ h1 {
   display: block;
   margin: auto 20px;
 
-  height: 300px;
 }
 
 button {
@@ -25,4 +24,7 @@ input {
   padding: 10px;
   font-size: 15px;
   margin: 5px;
+}
+.container {
+  /*background-color: lightblue;*/
 }
