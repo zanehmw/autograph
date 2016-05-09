@@ -3,8 +3,9 @@
 (function(){
   angular
   .module("carGraphingApp")
+  .run(function($rootScope){})
   .factory("SearchFactory", ["$http", SearchFactoryFunction])
-  .factory("DetailsFactory", DetailsFactoryFunction)
+  .factory("DetailsFactory", ["SearchFactory", "$http", DetailsFactoryFunction])
 
 
   function SearchFactoryFunction($http){
@@ -22,29 +23,27 @@
      return $http.jsonp(url);
    }
 
-   DetailsFactoryFunction.$inject = ["SearchFactory", "$http"]
   function DetailsFactoryFunction(SearchFactory, $http){
     return SearchFactory
-      .then(function(res){
-        console.log(res)
-        var carInfo = res["data"]
-        var cars = carInfo.findItemsByKeywordsResponse[0].searchResult[0].item || [];
-        var urlList = '&itemID=';
-        for(var i = 0; i < cars.length; i++){
-          urlList += cars[i].itemId[0] + ',';
-        }
-        var newUrl = "http://open.api.ebay.com/shopping?";
-        newUrl += "callname=GetMultipleItems";
-        newUrl += "&version=963";
-        newUrl += "&appid=MaryGrif-WDICarPr-PRD-42f839347-07238b74";
-        newUrl += "&GLOBAL-ID=EBAY-US";
-        newUrl += "&responseencoding=JSON";
-        newUrl += "&callbackname=JSON_CALLBACK";
-        newUrl += "&IncludeSelector=ItemSpecifics";
-        newUrl += "&REST-PAYLOAD";
-        newUrl += urlList;
+    .then(function(res){
+      var carInfo = res.data
+      var cars = carInfo.findItemsByKeywordsResponse[0].searchResult[0].item || [];
+      var urlList = '&itemID=';
+      for(var i = 0; i < cars.length; i++){
+        urlList += cars[i].itemId[0] + ',';
+      }
+      var newUrl = "http://open.api.ebay.com/shopping?";
+      newUrl += "callname=GetMultipleItems";
+      newUrl += "&version=963";
+      newUrl += "&appid=MaryGrif-WDICarPr-PRD-42f839347-07238b74";
+      newUrl += "&GLOBAL-ID=EBAY-US";
+      newUrl += "&responseencoding=JSON";
+      newUrl += "&callbackname=JSON_CALLBACK";
+      newUrl += "&IncludeSelector=ItemSpecifics";
+      newUrl += "&REST-PAYLOAD";
+      newUrl += urlList;
 
-        return $http.jsonp(newUrl)
-      })
+      return $http.jsonp(newUrl)
+    })
   };
 })();

@@ -11,16 +11,12 @@
     var graphVm = this;
     $('.container').highcharts({
       xAxis: {
-        title: {
-               text: 'Mileage'
-           },
+        title: {text: 'Mileage'},
         min: 0,
         max: 200000
       },
       yAxis: {
-        title: {
-               text: 'Price'
-           },
+        title: {text: 'Price'},
         min: 0,
         max: 200000
       },
@@ -31,9 +27,7 @@
         type: 'line',
         name: 'Average Market Value',
         data: [[0, 1.11], [200000, 200000]], //line of best fit function goes here
-        marker: {
-          enabled: false
-        },
+        marker: {enabled: false},
         states: {
           hover: {
             lineWidth: 0
