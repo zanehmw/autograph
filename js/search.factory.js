@@ -4,7 +4,9 @@
 (function(){
   angular
   .module("carGraphingApp")
+  .run(function($rootScope){})
   .factory("SearchFactory", ["$http", SearchFactoryFunction])
+
 
 
 
@@ -58,9 +60,9 @@
                    return $http.jsonp(newUrl);
 
                });
-
        }
      };
    }
+
 
 })();
