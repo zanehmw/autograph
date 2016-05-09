@@ -44,10 +44,7 @@
         newUrl += "&REST-PAYLOAD";
         newUrl += urlList;
 
-        console.log(newUrl);
-
         return $http.jsonp(newUrl)
-
       })
   };
 })();

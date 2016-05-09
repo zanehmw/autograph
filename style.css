@@ -7,13 +7,13 @@ li {
 }
 ul {
     background-color: #dddddd;
-    padding: 15px;
+    padding: 10px;
     font-size: 20px;
 }
-h1 {
-  display: block;
-  margin: auto 20px;
 
+li img {
+  margin: auto 20px;
+  height: 70px;
 }
 
 button {
@@ -25,6 +25,7 @@ input {
   font-size: 15px;
   margin: 5px;
 }
+
 .container {
   /*background-color: lightblue;*/
 }

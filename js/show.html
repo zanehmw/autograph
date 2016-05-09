@@ -1,7 +1,6 @@
 <h2> Cars </h2>
 
 <div data-ng-repeat="car in carShowVm.cars">
-  <p>
-    <img data-ng-src="{{car}}"></img>
-  </p>
+  <p>{{car.make + ' ' + car.model}}</p>
+  <img data-ng-src="{{car.picture_url}}"></img>
 </div>
