@@ -26,15 +26,16 @@
 
       for(var j=0; j<res.length; j++){
         searchVm.rawCars = res[j]
+        console.log(searchVm.rawCars)
         for(var i=0; i<searchVm.rawCars.length; i++){
            if (searchVm.rawCars[i].ItemSpecifics){
            var toParse = searchVm.rawCars[i].ItemSpecifics.NameValueList;
            searchVm.c = {}
            jQuery.grep(toParse, function(n){
              if (n.Name == "Make") {searchVm.c.model = n.Value[0]; console.log(n.Value[0]);}
-             else if (n.Name == "Model") {searchVm.c.make = n.Value[0]; console.log(n.Value[0]);}
-             else if (n.Name == "Year") {searchVm.c.year = n.Value[0]; console.log(n.Value[0]);}
-             else if (n.Name == "Mileage") {searchVm.c.mileage = n.Value[0]; console.log(n.Value[0]);}
+             if (n.Name == "Model") {searchVm.c.make = n.Value[0]; console.log(n.Value[0]);}
+             if (n.Name == "Year") {searchVm.c.year = n.Value[0]; console.log(n.Value[0]);}
+             if (n.Name == "Mileage") {searchVm.c.mileage = n.Value[0]; console.log(n.Value[0]);}
            })
 
            if (searchVm.c.mileage > searchVm.maxMileage) {
@@ -43,7 +44,6 @@
            if (searchVm.rawCars[i].ConvertedCurrentPrice.Value > searchVm.maxPrice){
              searchVm.maxPrice = searchVm.rawCars[i].ConvertedCurrentPrice.Value
            }
-
            searchVm.cars.push({
              make: searchVm.c.make,
              model: searchVm.c.model,
@@ -58,7 +58,13 @@
           }
         }
       }
-    console.log(searchVm.cars[0]);
+    console.log(searchVm.cars)
+    var newGraph = $("<car-graph></car-graph>")
+    angular.$('body').injector().invoke(function($compile){
+      var $scope = searchVm;
+      $('body').append($compile(newGraph)($scope))
+      $scope.$apply();
+    })
   })
 }
 }

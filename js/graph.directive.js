@@ -4,7 +4,7 @@ angular
   .directive('carGraph', function(){
     return {
       templateUrl: 'js/graph.html',
-      replace: true,
+      replace: false,
       controller: 'searchController',
       controllerAs: 'searchVm',
       scope: {},
