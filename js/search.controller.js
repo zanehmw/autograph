@@ -4,11 +4,12 @@
   angular
   .module("carGraphingApp")
   .controller("searchController", [
+  "$scope",
   "SearchFactory",
   SearchControllerFunction]);
 
-  function SearchControllerFunction(SearchFactory){
-    var searchVm = this;
+  function SearchControllerFunction($scope, SearchFactory){
+    var searchVm = $scope;
 
     searchVm.cars = [{x:2000, y:1000}, {x:130143, y:2330}]
     searchVm.maxPrice = 2330;

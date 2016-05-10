@@ -3,10 +3,15 @@ angular
   .module('carGraphingApp')
   .directive('carGraph', function(){
     return {
-      templateUrl: '#/graph.html',
+      templateUrl: 'js/graph.html',
       replace: true,
       controller: 'searchController',
-      link: function link(){
+      controllerAs: 'searchVm',
+      scope: {},
+      bindToController: {
+        name: '='
+      },
+      link: function(searchVm){
         searchVm.GraphData = function($http){
           $('.container').highcharts({
             chart: {
