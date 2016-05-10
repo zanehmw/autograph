@@ -8,7 +8,6 @@
   .factory("SearchFactory", ["$http", SearchFactoryFunction])
   .factory("DetailsFactory", DetailsFactoryFunction);
 
-
   function SearchFactoryFunction($http, $q){
     return {
       sendData: function(data){
@@ -69,6 +68,6 @@
           return $http.jsonp(newUrl);
 
       });
- }
-};}
+    }
+  };}
 })();

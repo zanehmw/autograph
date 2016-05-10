@@ -5,7 +5,7 @@
   .module("carGraphingApp")
   .controller("graphController", [
   "$http",
-  GraphControllerFunction])
+  GraphControllerFunction,])
 
   function GraphControllerFunction($http){
     var graphVm = this;
