@@ -5,10 +5,9 @@
   .module("carGraphingApp")
   .controller("graphController", [
   "$http",
-  "GraphFactory",
   GraphControllerFunction,])
 
-  function GraphControllerFunction($http, GraphFactory){
+  function GraphControllerFunction($http){
     var graphVm = this;
     $('.container').highcharts({
         chart: {
