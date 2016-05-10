@@ -10,6 +10,11 @@
     var url=[];
     return {
       sendData: function(data){
+<<<<<<< HEAD
+=======
+
+        //  console.log(data);
+>>>>>>> 332d2d1745639d9e7e83e2c6a12d38151cf8669c
         url = "http://svcs.ebay.com/services/search/FindingService/v1";
           url += "?OPERATION-NAME=findItemsByKeywords";
           url += "&SERVICE-VERSION=1.0.0";
@@ -41,8 +46,14 @@
           var loopCounter = 4;
           var resultsArray = [];
           var i = 0;
+<<<<<<< HEAD
 
           while(i<99 || i<cars.length) {
+=======
+
+          while(i<99 || i<cars.length) {
+
+>>>>>>> 332d2d1745639d9e7e83e2c6a12d38151cf8669c
             urlList = '&itemID=';
 
             for(i; i < cars.length-(loopCounter*20); i++){
@@ -52,6 +63,7 @@
             loopCounter=loopCounter-1;
 
             var newUrl = "http://open.api.ebay.com/shopping?";
+<<<<<<< HEAD
               newUrl += "callname=GetMultipleItems";
               newUrl += "&version=963";
               newUrl += "&appid=MaryGrif-WDICarPr-PRD-42f839347-07238b74";
@@ -61,6 +73,17 @@
               newUrl += "&IncludeSelector=ItemSpecifics";
               newUrl += "&REST-PAYLOAD";
               newUrl += urlList;
+=======
+            newUrl += "callname=GetMultipleItems";
+            newUrl += "&version=963";
+            newUrl += "&appid=MaryGrif-WDICarPr-PRD-42f839347-07238b74";
+            newUrl += "&GLOBAL-ID=EBAY-US";
+            newUrl += "&responseencoding=JSON";
+            newUrl += "&callbackname=JSON_CALLBACK";
+            newUrl += "&IncludeSelector=ItemSpecifics";
+            newUrl += "&REST-PAYLOAD";
+            newUrl += urlList;
+>>>>>>> 332d2d1745639d9e7e83e2c6a12d38151cf8669c
 
             console.log(newUrl);
 
@@ -72,7 +95,11 @@
               });
             }
             else {
+<<<<<<< HEAD
             $http.jsonp(newUrl).then(function(res){
+=======
+              $http.jsonp(newUrl).then(function(res){
+>>>>>>> 332d2d1745639d9e7e83e2c6a12d38151cf8669c
                 console.log(res.data.Item)
                 resultsArray.push(res.data.Item);
               })
