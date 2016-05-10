@@ -25,3 +25,9 @@ input {
   font-size: 15px;
   margin: 5px;
 }
+
+.teampic img {
+  height: 300px;
+  margin: auto;
+  padding: 0;
+}
