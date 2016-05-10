@@ -1,10 +1,12 @@
 body {
   background-color: solid white;
 }
+
 li {
     display: inline;
     padding: 20px;
 }
+
 ul {
     background-color: #dddddd;
     padding: 10px;
@@ -20,8 +22,15 @@ button {
   padding: 10px;
   font-size: 15px;
 }
+
 input {
   padding: 10px;
   font-size: 15px;
   margin: 5px;
+}
+
+.teampic img {
+  height: 300px;
+  margin: auto;
+  padding: 0;
 }

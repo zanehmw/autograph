@@ -7,13 +7,11 @@
   .run(function($rootScope){})
   .factory("SearchFactory", ["$http", SearchFactoryFunction])
 
-
-
-
   function SearchFactoryFunction($http, $q){
     var url=[];
     return {
       sendData: function(data){
+
 
         console.log(data);
 
@@ -101,6 +99,5 @@
        }
      };
    }
-
 
 })();
