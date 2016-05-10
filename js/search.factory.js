@@ -4,7 +4,6 @@
 (function(){
   angular
   .module("carGraphingApp")
-  .run(function($rootScope){})
   .factory("SearchFactory", ["$http", SearchFactoryFunction])
 
   function SearchFactoryFunction($http, $q){

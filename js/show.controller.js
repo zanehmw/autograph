@@ -4,14 +4,14 @@
   angular
   .module("carGraphingApp")
   .controller("carShowController", [
-    "DetailsFactory",
+    "SearchFactory",
     "$http",
     carShowControllerFunction
   ]);
 
-  function carShowControllerFunction(DetailsFactory, $http) {
+  function carShowControllerFunction(SearchFactory, $http) {
     var carShowVm = this;
-    DetailsFactory
+    SearchFactory
     .then(function(res){
       carShowVm.cars = [];
       carShowVm.rawCars = res.data.Item;
@@ -21,8 +21,8 @@
         jQuery.grep(toParse, function(n){
           if (n.Name == "Make") {carShowVm.c.model = n.Value[0]}
           if (n.Name == "Model") {carShowVm.c.make = n.Value[0]}
-          if (n.Name == "Year") {carShowVm.c.year = n.Value[0]}
-          if (n.Name == "Mileage") {carShowVm.c.mileage = n.Value[0]}
+          if (n.Name == "Year") {carShowVm.c.year = parseInt(n.Value[0])}
+          if (n.Name == "Mileage") {carShowVm.c.mileage = parseInt(n.Value[0])}
         })
         carShowVm.cars.push({
           make: carShowVm.c.make,

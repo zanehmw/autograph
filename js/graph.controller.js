@@ -5,9 +5,10 @@
   .module("carGraphingApp")
   .controller("graphController", [
   "$http",
-  GraphControllerFunction])
+  "GraphFactory",
+  GraphControllerFunction,])
 
-  function GraphControllerFunction($http){
+  function GraphControllerFunction($http, GraphFactory){
     var graphVm = this;
     $('.container').highcharts({
         chart: {
@@ -81,12 +82,52 @@
             },
             name: 'Car',
             color: 'rgba(223, 83, 83, .5)',
-            data: [[1610, 51000], [16000, 59000], [15900, 49000], [157000, 63000], [155000, 200000],
-                [170000, 59000], [159000, 47000], [166000, 69000], [176000, 66000], [100000, 75000],
-                [172000, 55000], [170000, 54000], [172000, 20000], [153000, 42000], [160000, 50000],
-                [147000, 49000], [168000, 49000], [175000, 73000], [157000, 17000], [167000, 68000],
-                [176000, 71000], [164000, 55000], [160000, 48000], [174000, 166000], [163000, 67000]]
-
+            // data: [[1610, 51000], [16000, 59000], [15900, 49000], [157000, 63000], [155000, 200000],
+            //     [170000, 59000], [159000, 47000], [166000, 69000], [176000, 66000], [100000, 75000],
+            //     [172000, 55000], [170000, 54000], [172000, 20000], [153000, 42000], [160000, 50000],
+            //     [147000, 49000], [168000, 49000], [175000, 73000], [157000, 17000], [167000, 68000],
+            //     [176000, 71000], [164000, 55000], [160000, 48000], [174000, 166000], [163000, 67000]]
+            data: [
+              {make: 'Honda',
+                model: 'Civic',
+                year: 1994,
+                x: 101041,
+                y: 4000,
+                location: 'Rockville, MD',
+                listing_url: 'google.com',
+                picture_url: 'http://car-pictures.cars.com/images/?IMG=cac10foc051c01401.png&WIDTH=624&AUTOTRIM=1&SPECIAL=&ACT=F',
+                condition: 'Used'
+              },
+              {make: 'Honda',
+                model: 'Civic',
+                year: 1999,
+                x: 34291,
+                y: 5010,
+                location: 'Richmond, VA',
+                listing_url: 'google.com',
+                picture_url: 'http://car-pictures.cars.com/images/?IMG=cac10foc051c01401.png&WIDTH=624&AUTOTRIM=1&SPECIAL=&ACT=F',
+                condition: 'Used'
+              },
+              {make: 'Honda',
+                model: 'Civic',
+                year: 1989,
+                x: 198730,
+                y: 1000,
+                location: 'Fairfax, VA',
+                listing_url: 'google.com',
+                picture_url: 'http://car-pictures.cars.com/images/?IMG=cac10foc051c01401.png&WIDTH=624&AUTOTRIM=1&SPECIAL=&ACT=F',
+                condition: 'Refurbished'
+              },
+              {make: 'Honda',
+                model: 'Civic',
+                year: 2002,
+                x: 184012,
+                y: 3101,
+                location: 'Washington, DC',
+                listing_url: 'google.com',
+                picture_url: 'http://car-pictures.cars.com/images/?IMG=cac10foc051c01401.png&WIDTH=624&AUTOTRIM=1&SPECIAL=&ACT=F',
+                condition: 'Used'
+              }]
         }]
     })
       }
