@@ -12,6 +12,7 @@
 
     this.search = function(){
     SearchFactory.sendData(this.searchTerms).then(function(res){
+      console.log(res);
       searchVm.cars = [];
       searchVm.rawCars = res.data.Item;
       console.log("boop bip bip");
