@@ -10,15 +10,28 @@
   function GraphControllerFunction($http){
     var graphVm = this;
     $('.container').highcharts({
-        chart: {
-            type: 'scatter',
-            zoomType: 'xy'
-        },
-        title: {
-            text: 'Results'
-        },
-        subtitle: {
-            text: 'Source: None'
+      xAxis: {
+        title: {text: 'Mileage'},
+        min: 0,
+        max: 200000
+      },
+      yAxis: {
+        title: {text: 'Price'},
+        min: 0,
+        max: 200000
+      },
+      title: {
+        text: 'Results'
+      },
+      series: [{
+        type: 'line',
+        name: 'Average Market Value',
+        data: [[0, 1.11], [200000, 200000]], //line of best fit function goes here
+        marker: {enabled: false},
+        states: {
+          hover: {
+            lineWidth: 0
+          }
         },
         xAxis: {
             title: {
@@ -88,8 +101,9 @@
                 [147000, 49000], [168000, 49000], [175000, 73000], [157000, 17000], [167000, 68000],
                 [176000, 71000], [164000, 55000], [160000, 48000], [174000, 166000], [163000, 67000]]
         }]
-    })
-      }
+    }]
+  });
+}
 }());
 
 // Load the fonts
