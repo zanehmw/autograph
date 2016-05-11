@@ -38,7 +38,6 @@
           var cars = carInfo.findItemsByKeywordsResponse[0].searchResult[0].item || [];
           var urlList = '&itemID=';
           var loopCount = Math.floor(cars.length/20);
-          console.log(loopCount)
           var resultsArray = [];
 
           for(var i=0; i < loopCount; i++) {
@@ -59,8 +58,6 @@
             newUrl += "&IncludeSelector=ItemSpecifics";
             newUrl += "&REST-PAYLOAD";
             newUrl += urlList;
-
-            console.log(newUrl);
 
             if (i == (loopCount-1)){
               return $http.jsonp(newUrl).then(function(res){

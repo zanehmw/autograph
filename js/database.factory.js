@@ -9,7 +9,7 @@
   ]);
 
   function FactoryFunction($resource) {
-    return $resource("http://localhost:3000/cars/:id", {}, {
+    return $resource("https://autographapi.herokuapp.com/cars/:id", {}, {
       update: {method: "put"}
     });
   }

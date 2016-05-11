@@ -52,7 +52,6 @@
         newRegression[n][1] = newRY
       }
       newRegression.sort(compareFunc)
-      console.log(newRegression)
       chart.series[0].setData(newRegression, false);
       chart.series[1].setData(newData, false);
       chart.xAxis[0].setExtremes(0, (maxM * 1.1));
@@ -66,14 +65,12 @@
 
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
-        console.log(res)
         searchVm.cars = [];
         searchVm.maxMileage = 0;
         searchVm.maxPrice = 0;
 
         for(var j=0; j<res.length; j++){
           searchVm.rawCars = res[j]
-          console.log(searchVm.rawCars)
           for(var i=0; i<searchVm.rawCars.length; i++){
             if (searchVm.rawCars[i].ItemSpecifics){
               var toParse = searchVm.rawCars[i].ItemSpecifics.NameValueList;
