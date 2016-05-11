@@ -35,8 +35,6 @@
           url += "&paginationInput.entriesPerPage=100";
 
         return $http.jsonp(url).then(function(res){
-          // console.log("hi111");
-          // console.log(res);
           var carInfo = res.data;
           var cars = carInfo.findItemsByKeywordsResponse[0].searchResult[0].item || [];
           var urlList = '&itemID=';

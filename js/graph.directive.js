@@ -25,7 +25,7 @@
               zoomType: 'xy'
             },
             title: {text: 'Results'},
-            subtitle: {text: 'Source: None'},
+            // subtitle: {text: 'Ebay search results'},
             xAxis: {
               title: {
                 enabled: true,
@@ -75,13 +75,13 @@
               }
             },
             series: [{
-              regression: true ,
-              regressionSettings: {
-                name: 'Average Market Value',
-                type: 'linear',
-                color:  'rgba(223, 83, 83, .9)'
-              },
+              name: 'Avg value',
+              type: 'line',
+              color: 'rgba(223, 83, 83, .9)',
+              data: searchVm.cars,
+            }, {
               name: 'Car',
+              type: 'scatter',
               color: 'rgba(223, 83, 83, .5)',
               data: searchVm.cars
             }]
