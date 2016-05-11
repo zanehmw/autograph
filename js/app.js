@@ -25,12 +25,6 @@
         controller: "helpController",
         controllerAs: "helpVm"
       })
-      // .state("graph", {
-      //   url: "/graph",
-      //   templateUrl: "js/graph.html",
-      //   controller: "graphController",
-      //   controllerAs: "graphVm"
-      // })
       .state("carShow", {
         url: "/show",
         templateUrl: "js/show.html",

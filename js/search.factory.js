@@ -11,7 +11,9 @@
     var url=[];
     return {
       sendData: function(data){
-
+        if (!data.carModel){
+          data.carModel = ''
+        }
         url = "http://svcs.ebay.com/services/search/FindingService/v1";
           url += "?OPERATION-NAME=findItemsByKeywords";
           url += "&SERVICE-VERSION=1.0.0";
@@ -19,7 +21,7 @@
           url += "&GLOBAL-ID=EBAY-MOTOR";
           url += "&responseencoding=JSON";
           url += "&callback=JSON_CALLBACK";
-          url += "&keywords=" + data.carMake + "%20" + data.carModel + "";
+          url += keywords + data.carMake + "%20" + data.carModel + "";
           url += "&buyerPostalCode=" + data.zipCode + "";
           url += "&CategoryID=6001";
           url += "&itemFilter(0).name=LocalSearchOnly";

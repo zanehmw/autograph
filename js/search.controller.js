@@ -59,7 +59,6 @@
     }
 
     this.search = function(){
-
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
         searchVm.cars = [];
