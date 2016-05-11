@@ -9,7 +9,8 @@
     SearchControllerFunction]);
 
   function SearchControllerFunction($scope, SearchFactory){
-    var searchVm = $scope;
+
+    var searchVm = this;
 
     searchVm.cars = [{x:2000, y:1000}, {x:130143, y:2330}]
     searchVm.maxPrice = 2330;
@@ -23,6 +24,7 @@
     }
 
     this.search = function(){
+
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
         searchVm.cars = [];
@@ -70,4 +72,5 @@
       })
     }
   }
+
 }());

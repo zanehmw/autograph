@@ -2,6 +2,7 @@
 "use strict";
 
 (function(){
+
   angular
   .module("carGraphingApp")
   .factory("SearchFactory", ["$http", SearchFactoryFunction])
@@ -77,10 +78,12 @@
                 console.log(res.data.Item)
                 resultsArray.push(res.data.Item);
               })
+
             }
           }
         });
       }
     }
   }
+
 })();

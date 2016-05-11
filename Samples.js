@@ -1,73 +1,42 @@
-//SEND DATA EXAMPLE
+var UserFavourite = Parse.Object.extend("UserFavourite");
+var queryFavourite = new Parse.Query(UserFavourite);
 
-"use strict";
+var userArray = [];
+var TestItem = Parse.Object.extend("TestItem");
+var query = new Parse.Query(TestItem);
+query.limit(1000);
+query.equalTo('school', 'Union College (NY)');
+query.find().then(function (results) {
+    return results;
+}).then(function (results) {
+    var promises = [];
+    for (var i = 0; i < results.length; i++) {
+        var object = results[i];
+        var item = object.get('item');
+        var school = object.get('school');
+        var meal = object.get('meal');
 
-(function(){
-  angular
-  .module("carGraphingApp")
-  .factory("SearchFactory", ["$http", SearchFactoryFunction])
-  .factory("DetailsFactory", DetailsFactoryFunction);
-
-  function SearchFactoryFunction($http, $q){
-    return {
-      sendData: function(data){
-
-        console.log(data);
-
-        var url = "http://svcs.ebay.com/services/search/FindingService/v1";
-         url += "?OPERATION-NAME=findItemsByKeywords";
-         url += "&SERVICE-VERSION=1.0.0";
-         url += "&SECURITY-APPNAME=MaryGrif-WDICarPr-PRD-42f839347-07238b74";
-         url += "&GLOBAL-ID=EBAY-US";
-         url += "&responseencoding=JSON";
-         url += "&callback=JSON_CALLBACK";
-         url += "&keywords=" + data.carMake + "%20" + data.carModel + "";
-         url += "&buyerPostalCode=" + data.zipCode + "";
-         url += "&itemFilter(0).name=LocalSearchOnly";
-         url += "&itemFilter(0).value=true";
-         url += "&itemFilter(1).name=MaxDistance";
-         url += "&itemFilter(1).value=" + data.range + "";
-         url += "&paginationInput.entriesPerPage=20";
-         url += "&CategoryID=6001";
-
-         console.log(url);
-
-         return $http.jsonp(url);
-
-       }
-     };
-   }
-
-  DetailsFactoryFunction.$inject = ["SearchFactory", "$http"];
-  function DetailsFactoryFunction(SearchFactory, $http){
-    return {
-      sendData: function(data){
-        SearchFactory.sendData(data)
-        .then(function(res){
-          console.log("hi111");
-          console.log(res);
-          var carInfo = res["data"];
-          var cars = carInfo.findItemsByKeywordsResponse[0].searchResult[0].item || [];
-          var urlList = '&itemID=';
-          for(var i = 0; i < cars.length; i++){
-            urlList += cars[i].itemId[0] + ',';
-          }
-          var newUrl = "http://open.api.ebay.com/shopping?";
-          newUrl += "callname=GetMultipleItems";
-          newUrl += "&version=963";
-          newUrl += "&appid=MaryGrif-WDICarPr-PRD-42f839347-07238b74";
-          newUrl += "&GLOBAL-ID=EBAY-US";
-          newUrl += "&responseencoding=JSON";
-          newUrl += "&callbackname=JSON_CALLBACK";
-          newUrl += "&IncludeSelector=ItemSpecifics";
-          newUrl += "&REST-PAYLOAD";
-          newUrl += urlList;
-
-          console.log(newUrl);
-
-          return $http.jsonp(newUrl);
-
-      });
+        var UserFavourite = Parse.Object.extend("UserFavourite");
+        var queryFavourite = new Parse.Query(UserFavourite);
+        queryFavourite.equalTo("item", item);
+        queryFavourite.equalTo("school", school);
+        var prom = queryFavourite.find().then(function (users) {
+            for (var i = 0; i < users.length; i++) {
+                var user = users[i];
+                var userID = user.get('user').id;
+                if (userArray.indexOf(userID) === -1) {
+                    userArray.push(userID);
+                }
+                //                  console.log(userArray);
+                return userArray;
+            }
+            return userArray;
+        });
+        promises.push(prom);
+        console.log('sadf ' + userArray);
     }
-  };}
-})();
+    console.log('sadf ' + userArray);
+    return Parse.Promise.when.apply(Parse.Promise, promises);
+}).then(function () {
+    console.log(userArray);
+});
