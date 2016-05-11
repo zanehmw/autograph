@@ -3,14 +3,14 @@ body {
 }
 
 li {
-    display: inline;
-    padding: 20px;
+  display: inline;
+  padding: 20px;
 }
 
 ul {
-    background-color: #dddddd;
-    padding: 10px;
-    font-size: 20px;
+  background-color: #dddddd;
+  padding: 10px;
+  font-size: 20px;
 }
 
 li img {

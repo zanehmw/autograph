@@ -1,0 +1,2 @@
+class CarSearchesNotesController < ApplicationController
+end

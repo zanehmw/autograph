@@ -1,11 +1,10 @@
 <h2>Search Info<h2>
-<form data-ng-model="searchbox">
+  <form data-ng-model="searchbox">
+    <input placeholder="Make" data-ng-model="searchVm.searchTerms.carMake" /><br>
+    <input placeholder="Model" data-ng-model="searchVm.searchTerms.carModel" /><br>
+    <input placeholder="ZipCode" data-ng-model="searchVm.searchTerms.zipCode" /><br>
+    <input placeholder="Search Radius" data-ng-model="searchVm.searchTerms.radius" /><br>
+    <button type="submit" data-ng-click="searchVm.search()">Search</button>
+  </form>
 
-  <input placeholder="Make" data-ng-model="searchVm.searchTerms.carMake" /><br>
-  <input placeholder="Model" data-ng-model="searchVm.searchTerms.carModel" /><br>
-  <input placeholder="ZipCode" data-ng-model="searchVm.searchTerms.zipCode" /><br>
-  <input placeholder="Search Radius" data-ng-model="searchVm.searchTerms.radius" /><br>
-  <button type="submit" data-ng-click="searchVm.search()">Search</button>
-</form>
-
-<car-graph></car-graph>
+  <car-graph></car-graph>

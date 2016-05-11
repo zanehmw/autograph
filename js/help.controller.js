@@ -4,12 +4,11 @@
   angular
   .module("carGraphingApp")
   .controller("helpController", [
-  "$http",
-  helpControllerFunction]);
+    "$http",
+    helpControllerFunction]);
 
-  function helpControllerFunction($http){
-    var helpVm = this;
-    console.log("hello")
-  }
+    function helpControllerFunction($http){
+      var helpVm = this;
+    }
 
-})();
+  })();
