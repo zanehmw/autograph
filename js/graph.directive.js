@@ -3,7 +3,7 @@
   .module('carGraphingApp')
   .directive('carGraph', function($http){
     return {
-      templateUrl: 'js/graph.html',
+      templateUrl: 'autograph/js/graph.html',
       replace: false,
       controller: 'searchController',
       controllerAs: 'searchVm',
