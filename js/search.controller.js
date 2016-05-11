@@ -58,7 +58,7 @@
                 condition: searchVm.rawCars[i].ConditionDisplayName
               })
             }
-          })
+          }
         }
 
         console.log(searchVm.cars)
