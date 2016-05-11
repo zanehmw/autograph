@@ -1,18 +1,19 @@
 (function(){
   angular
   .module('carGraphingApp')
-  .directive('carGraph', function(){
+  .directive('carGraph', function($http){
     return {
       templateUrl: 'js/graph.html',
       replace: false,
       controller: 'searchController',
       controllerAs: 'searchVm',
-      scope: {},
-      bindToController: {
-        name: '='
+      scope: {
+        control: '='
       },
       link: function(searchVm){
+        searchVm.internalControl = searchVm.control || {};
         searchVm.GraphData = function($http){
+          console.log('here')
           $('.container').highcharts({
             chart: {
               type: 'scatter',
@@ -240,7 +241,7 @@
         };
         // Apply the theme
         Highcharts.setOptions(Highcharts.theme);
-        searchVm.GraphData();
+        searchVm.GraphData()
       }
     }
   })

@@ -7,4 +7,4 @@
     <button type="submit" data-ng-click="searchVm.search()">Search</button>
   </form>
 
-  <car-graph></car-graph>
+  <car-graph control="inControl" data-ng-model="searchVm.searchComplete" data-ng-change="inControl.onRefresh()"></car-graph>
