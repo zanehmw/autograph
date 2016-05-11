@@ -56,7 +56,7 @@
                 condition: searchVm.rawCars[i].ConditionDisplayName
               })
             }
-          })
+          }
         }
         console.log(searchVm.cars)
         var newGraph = $("<car-graph></car-graph>")
