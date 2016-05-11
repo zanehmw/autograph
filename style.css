@@ -34,3 +34,19 @@ input {
   margin auto;
   padding: 0;
 }
+
+.searchpage {
+  display: inline;
+}
+
+.searchbox{
+  float: left;
+  width: 25%;
+  display: inline-block;
+}
+
+.graph {
+  float: left;
+  display: inline-block;
+  width: 75%
+}
