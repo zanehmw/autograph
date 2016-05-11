@@ -70,7 +70,6 @@
             }
             else {
               $http.jsonp(newUrl).then(function(res){
-                console.log(res)
                 resultsArray.push(res.data.Item);
               })
             }
