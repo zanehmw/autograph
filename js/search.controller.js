@@ -21,7 +21,6 @@
       var compareFunc = function(a, b){
         return (a[0]-b[0]);
       }
-
       var logarithmic = function(lData) {
         var sum = [0, 0, 0, 0];
         var results = [];
@@ -45,7 +44,6 @@
         }
         return results
       }
-      
       var newRegression = logarithmic(cleanData)
       for (var n=0; n < newRegression.length; n++){
         var newRY = maxP - newRegression[n][1]
@@ -65,7 +63,6 @@
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
         searchVm.cars = [];
-        if (searchVm.searchComplete){searchVm.searchComplete = false;}
         searchVm.maxMileage = 0;
         searchVm.maxPrice = 0;
 
@@ -103,7 +100,9 @@
             }
           }
         }
-        setTimeout(searchVm.onRefresh(searchVm.cars, searchVm.maxPrice, searchVm.maxMileage), 1000)
+      })
+      .then(function(){
+        searchVm.onRefresh(searchVm.cars, searchVm.maxPrice, searchVm.maxMileage)
       })
     }
   }

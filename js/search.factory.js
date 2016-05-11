@@ -66,22 +66,18 @@
 
             if (loopCounter == -1){
               return $http.jsonp(newUrl).then(function(res){
-                console.log(res.data.Item)
                 resultsArray.push(res.data.Item);
                 return resultsArray
               });
             }
             else {
               $http.jsonp(newUrl).then(function(res){
-                console.log(res.data.Item)
                 resultsArray.push(res.data.Item);
               })
-
             }
           }
         });
       }
     }
   }
-
 })();
