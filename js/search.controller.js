@@ -61,6 +61,7 @@
     this.search = function(){
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
+        console.log(res)
         searchVm.cars = [];
         searchVm.maxMileage = 0;
         searchVm.maxPrice = 0;

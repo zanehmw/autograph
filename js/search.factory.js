@@ -10,9 +10,7 @@
     var url=[];
     return {
       sendData: function(data){
-        if (!data.carModel){
-          data.carModel = ''
-        }
+
         url = "http://svcs.ebay.com/services/search/FindingService/v1";
         url += "?OPERATION-NAME=findItemsByKeywords";
         url += "&SERVICE-VERSION=1.0.0";
@@ -39,18 +37,17 @@
           var carInfo = res.data;
           var cars = carInfo.findItemsByKeywordsResponse[0].searchResult[0].item || [];
           var urlList = '&itemID=';
-          var loopCounter = 4;
+          var loopCount = Math.floor(cars.length/20);
+          console.log(loopCount)
           var resultsArray = [];
-          var i = 0;
 
-          while(i<99 || i<cars.length) {
+          for(var i=0; i < loopCount; i++) {
             urlList = '&itemID=';
 
-            for(i; i < cars.length-(loopCounter*20); i++){
-              urlList += cars[i].itemId[0] + ',';
+            for(var j=0; j < 20; j++){
+              var indexNo = ( i * 20 ) + j
+              urlList += cars[indexNo].itemId[0] + ',';
             }
-
-            loopCounter=loopCounter-1;
 
             var newUrl = "http://open.api.ebay.com/shopping?";
             newUrl += "callname=GetMultipleItems";
@@ -65,7 +62,7 @@
 
             console.log(newUrl);
 
-            if (loopCounter == -1){
+            if (i == (loopCount-1)){
               return $http.jsonp(newUrl).then(function(res){
                 resultsArray.push(res.data.Item);
                 return resultsArray
@@ -73,6 +70,7 @@
             }
             else {
               $http.jsonp(newUrl).then(function(res){
+                console.log(res)
                 resultsArray.push(res.data.Item);
               })
             }

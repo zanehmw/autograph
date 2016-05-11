@@ -18,7 +18,6 @@
         searchVm.maxPrice = 2330;
         searchVm.maxMileage = 130143;
         searchVm.GraphData = function($http){
-          console.log('here')
           $('.container').highcharts({
             chart: {
               type: 'scatter',
