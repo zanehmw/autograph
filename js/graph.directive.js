@@ -42,16 +42,6 @@
               min: 0,
               max: (searchVm.maxPrice + 1000)
             },
-            // legend: {
-            //     layout: 'vertical',
-            //     align: 'left',
-            //     verticalAlign: 'top',
-            //     x: 100,
-            //     y: 70,
-            //     floating: true,
-            //     backgroundColor: '#FFFFFF',
-            //     borderWidth: 1
-            // },
             plotOptions: {
               scatter: {
                 marker: {
@@ -69,8 +59,8 @@
                   }
                 },
                 tooltip: {
-                  headerFormat: '<b>{series.name}</b><br>',
-                  pointFormat: 'Mileage: {point.x}, Price: {point.y}'
+                  useHTML: true,
+                  pointFormat: '<b>{point.model}, {point.make}</b><br><b>Mileage: {point.x}</b><br> <b>Price: {point.y}</b><br> <b>Year: {point.year}</b><br> <b>Location: {point.location}</b>'
                 }
               }
             },
@@ -83,7 +73,16 @@
               name: 'Car',
               type: 'scatter',
               color: 'rgba(223, 83, 83, .5)',
-              data: searchVm.cars
+              data: searchVm.cars,
+              point: {
+                events: {
+                  click: function() {
+                    var someURL = this.listing_url;
+                    if (someURL)
+                    window.open(someURL);
+                  }
+                }
+              }
             }]
           })
         }
