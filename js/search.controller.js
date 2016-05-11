@@ -15,6 +15,8 @@
       console.log('here in refresher')
       var chart = $('.container').highcharts();
       chart.series[0].setData(newData, true);
+      chart.xAxis[0].setExtremes(0, (maxM * 1.1));
+      chart.yAxis[0].setExtremes(0, (maxP * 1.1));
       chart.redraw();
     }
 
