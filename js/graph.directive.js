@@ -70,7 +70,7 @@
                 },
                 tooltip: {
                   headerFormat: '<b>{series.name}</b><br>',
-                  pointFormat: 'Mileage: {point.x}, Price: {point.y}'
+                  pointFormat: '<b>Mileage: {point.x}</b><br> <b>Price: {point.y}</b><br> <b>Year: {point.year}</b><br> <b>Location: {point.location}</b><br>'
                 }
               }
             },
@@ -83,7 +83,16 @@
               name: 'Car',
               type: 'scatter',
               color: 'rgba(223, 83, 83, .5)',
-              data: searchVm.cars
+              data: searchVm.cars,
+              point: {
+                events: {
+                   click: function() {
+                       var someURL = this.listing_url;
+                       if (someURL)
+                           window.open(someURL);
+                   }
+                }
+              }
             }]
           })
         }
