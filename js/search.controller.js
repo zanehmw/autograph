@@ -11,16 +11,21 @@
   function SearchControllerFunction($scope, SearchFactory){
 
     var searchVm = this;
-
-    searchVm.cars = [{x:2000, y:1000}, {x:130143, y:2330}]
-    searchVm.maxPrice = 2330;
-    searchVm.maxMileage = 130143;
+    searchVm.onRefresh = function(newData, maxP, maxM){
+      console.log('here in refresher')
+      var chart = $('.container').highcharts();
+      chart.series[0].setData(newData, true);
+      chart.xAxis[0].setExtremes(0, (maxM * 1.1));
+      chart.yAxis[0].setExtremes(0, (maxP * 1.1));
+      chart.redraw();
+    }
 
     this.search = function(){
 
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
         searchVm.cars = [];
+        if (searchVm.searchComplete){searchVm.searchComplete = false;}
         searchVm.maxMileage = 0;
         searchVm.maxPrice = 0;
         console.log("boop bip bip");
@@ -36,8 +41,8 @@
               jQuery.grep(toParse, function(n){
                 if (n.Name == "Make") {searchVm.c.model = n.Value[0];}
                 if (n.Name == "Model") {searchVm.c.make = n.Value[0];}
-                if (n.Name == "Year") {searchVm.c.year = n.Value[0];}
-                if (n.Name == "Mileage") {searchVm.c.mileage = n.Value[0];}
+                if (n.Name == "Year") {searchVm.c.year = parseInt(n.Value[0]);}
+                if (n.Name == "Mileage") {searchVm.c.mileage = parseInt(n.Value[0]);}
               })
 
               if (searchVm.c.mileage > searchVm.maxMileage) {
@@ -60,14 +65,7 @@
             }
           }
         }
-
-        console.log(searchVm.cars)
-        var newGraph = $("<car-graph></car-graph>")
-        angular.$('body').injector().invoke(function($compile){
-        var $scope = searchVm;
-        $('body').append($compile(newGraph)($scope))
-        $scope.$apply();
-        })
+        setTimeout(searchVm.onRefresh(searchVm.cars, searchVm.maxPrice, searchVm.maxMileage), 400)
       })
     }
   }

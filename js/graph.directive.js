@@ -1,18 +1,24 @@
 (function(){
   angular
   .module('carGraphingApp')
-  .directive('carGraph', function(){
+  .directive('carGraph', function($http){
     return {
       templateUrl: 'js/graph.html',
       replace: false,
       controller: 'searchController',
       controllerAs: 'searchVm',
-      scope: {},
+      scope: {
+        control: '='
+      },
       bindToController: {
-        name: '='
+        cars: '='
       },
       link: function(searchVm){
+        searchVm.cars = [{x:2000, y:1000}, {x:130143, y:2330}]
+        searchVm.maxPrice = 2330;
+        searchVm.maxMileage = 130143;
         searchVm.GraphData = function($http){
+          console.log('here')
           $('.container').highcharts({
             chart: {
               type: 'scatter',
@@ -240,7 +246,7 @@
         };
         // Apply the theme
         Highcharts.setOptions(Highcharts.theme);
-        searchVm.GraphData();
+        searchVm.GraphData()
       }
     }
   })
