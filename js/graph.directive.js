@@ -69,8 +69,8 @@
                   }
                 },
                 tooltip: {
-                  headerFormat: '<b>{series.name}</b><br>',
-                  pointFormat: '<b>Mileage: {point.x}</b><br> <b>Price: {point.y}</b><br> <b>Year: {point.year}</b><br> <b>Location: {point.location}</b><br>'
+                  useHTML: true,
+                  pointFormat: '<b>{point.model}, {point.make}</b><br><b>Mileage: {point.x}</b><br> <b>Price: {point.y}</b><br> <b>Year: {point.year}</b><br> <b>Location: {point.location}</b>'
                 }
               }
             },

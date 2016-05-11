@@ -34,3 +34,15 @@ input {
   margin auto;
   padding: 0;
 }
+
+.search_container{
+  width: 100vw;
+}
+form{
+  width:30vw;
+  display:inline;
+}
+car-graph{
+  width:100px;
+  display:inline;
+}
