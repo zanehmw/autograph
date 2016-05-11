@@ -10,8 +10,13 @@
       scope: {
         control: '='
       },
+      bindToController: {
+        cars: '='
+      },
       link: function(searchVm){
-        searchVm.internalControl = searchVm.control || {};
+        searchVm.cars = [{x:2000, y:1000}, {x:130143, y:2330}]
+        searchVm.maxPrice = 2330;
+        searchVm.maxMileage = 130143;
         searchVm.GraphData = function($http){
           console.log('here')
           $('.container').highcharts({

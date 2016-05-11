@@ -11,11 +11,6 @@
   function SearchControllerFunction($scope, SearchFactory){
 
     var searchVm = this;
-
-    searchVm.cars = [{x:2000, y:1000}, {x:130143, y:2330}]
-    searchVm.maxPrice = 2330;
-    searchVm.maxMileage = 130143;
-    searchVm.inControl = {};
     searchVm.onRefresh = function(newData, maxP, maxM){
       console.log('here in refresher')
       var chart = $('.container').highcharts();
