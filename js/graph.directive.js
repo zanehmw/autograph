@@ -42,16 +42,6 @@
               min: 0,
               max: (searchVm.maxPrice + 1000)
             },
-            // legend: {
-            //     layout: 'vertical',
-            //     align: 'left',
-            //     verticalAlign: 'top',
-            //     x: 100,
-            //     y: 70,
-            //     floating: true,
-            //     backgroundColor: '#FFFFFF',
-            //     borderWidth: 1
-            // },
             plotOptions: {
               scatter: {
                 marker: {
@@ -86,11 +76,11 @@
               data: searchVm.cars,
               point: {
                 events: {
-                   click: function() {
-                       var someURL = this.listing_url;
-                       if (someURL)
-                           window.open(someURL);
-                   }
+                  click: function() {
+                    var someURL = this.listing_url;
+                    if (someURL)
+                    window.open(someURL);
+                  }
                 }
               }
             }]
