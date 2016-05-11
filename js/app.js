@@ -15,25 +15,25 @@
       $stateProvider
       .state("search", {
         url: "/",
-        templateUrl: "js/search.html",
+        templateUrl: "autograph/js/search.html",
         controller: "searchController",
         controllerAs: "searchVm"
       })
       .state("help", {
         url: "/help",
-        templateUrl: "js/help.html",
+        templateUrl: "autograph/js/help.html",
         controller: "helpController",
         controllerAs: "helpVm"
       })
       .state("history", {
         url: "/history",
-        templateUrl: "js/history.html",
+        templateUrl: "autograph/js/history.html",
         controller: "historyController",
         controllerAs: "historyVm"
       })
       .state("carShow", {
         url: "/show",
-        templateUrl: "js/show.html",
+        templateUrl: "autograph/js/show.html",
         controller: "carShowController",
         controllerAs: "carShowVm"
       });
