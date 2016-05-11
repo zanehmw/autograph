@@ -25,12 +25,12 @@
         controller: "helpController",
         controllerAs: "helpVm"
       })
-      // .state("graph", {
-      //   url: "/graph",
-      //   templateUrl: "js/graph.html",
-      //   controller: "graphController",
-      //   controllerAs: "graphVm"
-      // })
+      .state("history", {
+        url: "/history",
+        templateUrl: "js/history.html",
+        controller: "historyController",
+        controllerAs: "historyVm"
+      })
       .state("carShow", {
         url: "/show",
         templateUrl: "js/show.html",

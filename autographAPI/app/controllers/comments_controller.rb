@@ -1,8 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @car = Car.find(params[:car_id])
-    @comments = @car.comments.order(:created_at)
+    @comments = Comment.all.order(:created_at)
     render json: @comments.to_json, status: :ok
   end
 

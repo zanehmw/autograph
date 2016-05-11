@@ -22,5 +22,13 @@ module AutographAPI
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+        allow do
+          origins '*'
+          resource '*', :headers => :any, :methods => :any
+        end
+      end
+
   end
 end

@@ -16,18 +16,23 @@
   <script src="js/app.js"></script>
   <script src="js/search.controller.js"></script>
   <script src="js/search.factory.js"></script>
+  <script src="js/database.factory.js"></script>
+  <script src="js/comment.factory.js"></script>
   <script src="js/show.controller.js"></script>
   <script src="js/help.controller.js"></script>
+  <script src="js/history.controller.js"></script>
   <script src="js/graph.directive.js"></script>
 
   <link rel="stylesheet" href="style.css">
   <base href="/">
+
 </head>
 <body data-ng-app="carGraphingApp">
   <ul>
     <li class="logo"><img src="http://i.imgur.com/XRgA55k.png?1" alt=""><img src="http://i.imgur.com/PC31dWU.png?1" alt=""></li>
     <li><a data-ui-sref="search">Home</a></li>
     <li><a data-ui-sref="help">About/Help</a></li>
+    <li><a data-ui-sref="history">Search History</a></li>
   </ul>
   <div data-ui-view> </div>
 </body>

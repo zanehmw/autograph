@@ -9,14 +9,14 @@
 Car.destroy_all
 Comment.destroy_all
 
-Car.create({
-      brand: "Can't Buy Me Love",
-      designation: "bruh",
-      zip: "20850",
-      range: "100"
+newCar = Car.create({
+      carMake: "BMW",
+      carModel: "M3",
+      zipCode: "20850",
+      radius: "100"
     })
 
-Comment.create({
+newCar.comments.create({
       author: "Can't Buy Me Love",
       body: "http://www.wdidc.org/wdi-radio-lab-assets/mp3/The%20Beatles%20-%20Can%27t%20Buy%20Me%20Love.mp3",
     })

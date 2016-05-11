@@ -5,12 +5,14 @@
   .module("carGraphingApp")
   .controller("searchController", [
     "$scope",
+    "DatabaseFactory",
     "SearchFactory",
     SearchControllerFunction]);
 
-  function SearchControllerFunction($scope, SearchFactory){
-
+  function SearchControllerFunction($scope, DatabaseFactory, SearchFactory){
     var searchVm = this;
+    this.searchTerms = new DatabaseFactory();
+
     searchVm.onRefresh = function(newData, maxP, maxM){
       console.log('here in refresher')
       var chart = $('.container').highcharts();
@@ -21,7 +23,9 @@
     }
 
     this.search = function(){
-
+      console.log(this.searchTerms);
+      console.log("hiiiiiii");
+      this.searchTerms.$save();
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
         searchVm.cars = [];
