@@ -14,7 +14,7 @@ ul {
   padding: 10px;
   font-size: 20px;
   margin: 20px auto;
-  padding: 0;
+  padding: 5px;
 }
 
 li img {
@@ -47,6 +47,12 @@ input {
   float: left;
   width: 25%;
   display: inline-block;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
 }
 
 .graph {
@@ -58,7 +64,6 @@ input {
 a, a:visited {
   text-decoration: none;
   color: black;
-  /*font-weight: lighter;*/
   margin-bottom: 5px;
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-size: 14px;
