@@ -44,7 +44,8 @@ ul {
 li img {
   margin: auto 20px;
   height: 30px;
-  border-radius: black;
+  border-radius: 50%;
+  border-color: black;
   border: thin;
 
 }
