@@ -108,8 +108,10 @@ a:hover {
   background-color: #4d4d4d;
 }
 
-.comment, .author {
+.commentbox {
   background-color: solid white;
+}
+.comment, .author {
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 13px;
   font-style: normal;
