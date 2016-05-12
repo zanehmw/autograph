@@ -4,7 +4,6 @@
 <div class="commentbox" style="border-style: solid; border-width: 1px; border-color:gray; margin-bottom:20px; padding:5px; width:91.5%;" data-ng-repeat="history in historyVm.histories">
 
    <div style="margin: 10px; padding: 10px; font-size:1.5em; background-color: rgb(238, 238, 238); width:91.5%; text-align:center;">{{history.carMake.toUpperCase()}} {{history.carModel.toUpperCase()}} within {{history.radius}} miles of {{history.zipCode}} zipcode
-    <button class="deletebutton" data-ng-click="historyVm.destroy({id: history.id})">Delete this search</button>
    </div>
      <div style="padding: 0 0 0 20px;" data-ng-repeat="comment in history.comments">
      <p class="comment" style="font-size:.9em;">{{comment.body}}</p> <div class="author">Author: {{comment.author}}</div>
@@ -15,6 +14,6 @@
        <input value="history.newcomment.body" data-ng-model="history.newcomment.body" placeholder="Body" />
        <button data-ng-click="historyVm.create({id: history.id, author: history.newcomment.author, body: history.newcomment.body})">Create Comment</button>
      </form>
-
+     <button class="deletebutton" data-ng-click="historyVm.destroy({id: history.id})">Delete this search</button>
 </div>
 </div>
