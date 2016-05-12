@@ -12,7 +12,8 @@ ul {
   background-color: #dddddd;
   padding: 10px;
   font-size: 20px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 0;
 }
 
 li img {
