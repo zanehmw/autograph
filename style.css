@@ -2,7 +2,7 @@ body {
   background-color: solid white;
 }
 
-h1, p {
+h1, h2, p {
   color: black
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-style: normal;
