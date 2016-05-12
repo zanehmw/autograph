@@ -116,3 +116,9 @@ a:hover {
   padding: 15px;
   width: 86.9%;
 }
+
+.commentbox {
+  border: solid;
+  border-color: black;
+  border-width: thin;
+}
