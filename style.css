@@ -70,12 +70,12 @@ input {
   float: left;
   width: 25%;
   display: inline-block;
-  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  /*font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 15.4px;
+  line-height: 15.4px;*/
 }
 
 .graph {
