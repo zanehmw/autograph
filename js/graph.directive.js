@@ -23,6 +23,8 @@
               type: 'scatter',
               zoomType: 'xy'
             },
+            title: {text: ''},
+            // subtitle: {text: 'Ebay search results'},
             xAxis: {
               title: {
                 enabled: true,
