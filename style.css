@@ -120,9 +120,11 @@ a:hover {
 }
 
 .commentbox {
+  display: block;
+  text-align: center;
   border: solid;
   border-color: black;
   border-width: thin;
-  margin: 1px;
+  margin: 1px auto;
   width: 55%;
 }
