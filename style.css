@@ -70,6 +70,7 @@ input {
   float: left;
   width: 25%;
   display: inline-block;
+  background-color: purple;
   /*font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 14px;
   font-style: normal;
