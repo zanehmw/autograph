@@ -13,7 +13,7 @@
        <input style="font-size:.9em;" value="history.newcomment.author" data-ng-model="history.newcomment.author" placeholder="Author"/>
        <input value="history.newcomment.body" data-ng-model="history.newcomment.body" placeholder="Body" />
        <button data-ng-click="historyVm.create({id: history.id, author: history.newcomment.author, body: history.newcomment.body})">Create Comment</button>
+       <button class="deletebutton" data-ng-click="historyVm.destroy({id: history.id})">Delete this search</button>
      </form>
-     <button class="deletebutton" data-ng-click="historyVm.destroy({id: history.id})">Delete this search</button>
 </div>
 </div>
