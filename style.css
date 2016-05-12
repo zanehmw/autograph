@@ -1,3 +1,8 @@
+html {
+ margin-left:10vw;
+ margin-right:10vw;
+}
+
 body {
   background-color: solid white;
 }
@@ -27,15 +32,15 @@ li {
 ul {
   text-align: center;
   background-color: #dddddd;
-  padding: 10px;
+  padding: 15px;
   font-size: 20px;
-  margin: 20px auto;
-  padding: 5px;
+  margin: 15px;
+  width: 88.5%;
 }
 
 li img {
   margin: auto 20px;
-  height: 70px;
+  height: 30px;
 }
 
 button {
@@ -51,8 +56,9 @@ input {
 
 .teampic img {
   height: 300px;
-  margin auto;
+  margin: 0 auto;
   padding: 0;
+  ma
 }
 
 .searchpage {
@@ -60,6 +66,7 @@ input {
 }
 
 .searchbox{
+  margin: 0px 10px 10px 10px;
   float: left;
   width: 25%;
   display: inline-block;
@@ -73,8 +80,8 @@ input {
 
 .graph {
   float: left;
-  display: inline-block;
-  width: 75%
+  width: 70%;
+  margin-right: 10px;
 }
 
 a, a:visited {
