@@ -15,12 +15,12 @@ h1, h2, p {
   font-weight: 500;
   line-height: 15.4px;
 }
-  h1, h1 {
+  h1, h2, h3 {
     font-size: 20px;
   }
 
   p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
 li {
@@ -110,4 +110,5 @@ a:hover {
   border-color: black;
   border-width: thin;
   margin: 15px;
+  padding: 15px;
 }

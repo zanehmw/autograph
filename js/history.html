@@ -2,7 +2,8 @@
 
 <div class="historybox"data-ng-repeat="history in historyVm.histories">
 
-    <h2>{{history.carMake.toUpperCase()}} {{history.carModel.toUpperCase()}} within {{history.radius}} miles of {{history.zipCode}} zipcode </h2>
+    <h3>{{history.carMake.toUpperCase()}} {{history.carModel.toUpperCase()}} within {{history.radius}} miles of {{history.zipCode}} zipcode </h3>
+    <button data-ng-click="historyVm.destroy({id: history.id})">DELETE THIS SEARCH</button>
     <div data-ng-repeat="comment in history.comments">
     <p>{{comment.body}}</p>
     <p>Comment by {{comment.author}}</p>
@@ -14,5 +15,5 @@
       <button data-ng-click="historyVm.create({id: history.id, author: history.newcomment.author, body: history.newcomment.body})">Create Comment</button>
     </form>
 
-    <button data-ng-click="historyVm.destroy({id: history.id})">Delete</button>
+
 </div>
