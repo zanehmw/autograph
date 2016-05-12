@@ -13,11 +13,9 @@ ul {
   font-size: 20px;
 }
 
-.logo {
+li img {
   margin: auto 20px;
-  height: 40px;
-  background-color: #dddddd;
-  display: inline;
+  height: 70px;
 }
 
 button {
@@ -56,9 +54,15 @@ input {
 a, a:visited {
   text-decoration: none;
   color: black;
-  font-weight: lighter;
-  margin-bottom:
+  font-weight: ;
 }
+
+.logo {
+ text-align: center;
+ margin:0 auto;
+ height:8vh;
+};
+
 a:hover {
-  color: purple;
+  color: blue;
 }
