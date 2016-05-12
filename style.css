@@ -35,7 +35,7 @@ ul {
   padding: 15px;
   font-size: 20px;
   margin: 15px;
-  width: 88.5%;
+  width: 86.9%;
 }
 
 li img {
@@ -67,7 +67,6 @@ input {
 
 .searchbox{
   margin: 0px 10px 10px 10px;
-  background-color: purple;
   float: left;
   display: inline-block;
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
