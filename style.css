@@ -7,7 +7,7 @@ body {
   background-color: solid white;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   color: black
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-style: normal;
@@ -17,6 +17,9 @@ h1, h2, p {
 }
   h1, h2, h3 {
     font-size: 20px;
+  }
+  h3 {
+    color: purple;
   }
 
   p {
