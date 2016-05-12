@@ -54,7 +54,8 @@ input {
 a, a:visited {
   text-decoration: none;
   color: black;
-  font-weight: ;
+  font-weight: lighter;
+  margin-bottom: 5px;
 }
 
 .logo {
