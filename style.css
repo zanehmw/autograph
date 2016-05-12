@@ -121,4 +121,6 @@ a:hover {
   border: solid;
   border-color: black;
   border-width: thin;
+  margin: 1px;
+  width: 55%;
 }
