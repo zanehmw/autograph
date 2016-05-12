@@ -128,3 +128,7 @@ a:hover {
   margin: 1px auto;
   width: 55%;
 }
+
+.historydelete {
+  float: right;
+}

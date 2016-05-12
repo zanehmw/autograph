@@ -1,6 +1,6 @@
 <div class="historybox" data-ng-repeat="history in historyVm.histories">
 
-    <h3>{{history.carMake.toUpperCase()}} {{history.carModel.toUpperCase()}} within {{history.radius}} miles of {{history.zipCode}} zipcode <button data-ng-click="historyVm.destroy({id: history.id})">DELETE THIS SEARCH</button></h3>
+    <h3>{{history.carMake.toUpperCase()}} {{history.carModel.toUpperCase()}} within {{history.radius}} miles of {{history.zipCode}} zipcode <button class="historydelete" data-ng-click="historyVm.destroy({id: history.id})">DELETE THIS SEARCH</button></h3>
 
     <div class="commentbox" data-ng-repeat="comment in history.comments">
     <p>{{comment.body}} | Author: {{comment.author}}</p>
