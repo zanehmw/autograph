@@ -5,8 +5,9 @@
    <div style="margin: 10px; padding: 10px; font-size:1.5em; background-color: rgb(238, 238, 238); width:91.5%; text-align:center;">{{history.carMake.toUpperCase()}} {{history.carModel.toUpperCase()}} within {{history.radius}} miles of {{history.zipCode}} zipcode
    </div>
      <div style="padding: 0 0 0 20px;" data-ng-repeat="comment in history.comments">
-     <p style="font-size:.9em;">{{comment.body}}</p>
-     <p style="font-size:.5em;">Comment by {{comment.author}}</p>
+       <ul>
+     <p class="comment" style="font-size:.9em;">{{comment.body}}</p> <div class="author">Author: {{comment.author}}</div>
+       </ul>
      </div>
 
      <form>

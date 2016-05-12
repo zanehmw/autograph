@@ -108,25 +108,16 @@ a:hover {
   background-color: #4d4d4d;
 }
 
-.historybox {
-  display: block;
-  text-align: center;
-  border: solid;
-  border-color: black;
-  border-width: thin;
-  margin: 15px auto;
-  padding: 15px;
-  width: 86.9%;
+.comment, .author {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
 }
-
-.commentbox {
-  display: block;
-  text-align: center;
-  border: solid;
-  border-color: black;
-  border-width: thin;
-  margin: 1px auto;
-  width: 55%;
+.author {
+  color: purple;
 }
 
 .historydelete {
