@@ -112,7 +112,7 @@ a:hover {
   border: solid;
   border-color: black;
   border-width: thin;
-  margin: 15px;
+  margin: 15px auto;
   padding: 15px;
   width: 86.9%;
 }
