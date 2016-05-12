@@ -13,10 +13,12 @@ ul {
   font-size: 20px;
 }
 
-img {
+.logo {
   margin: auto 20px;
   height: 50px;
   background-color: #dddddd;
+  display: inline;
+
 }
 
 button {
