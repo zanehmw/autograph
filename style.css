@@ -5,6 +5,7 @@ body {
 li {
   display: inline;
   padding: 20px;
+  margin: 0 auto;
 }
 
 ul {
@@ -54,8 +55,14 @@ input {
 a, a:visited {
   text-decoration: none;
   color: black;
-  font-weight: lighter;
+  /*font-weight: lighter;*/
   margin-bottom: 5px;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
 }
 
 .logo {
