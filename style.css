@@ -109,6 +109,8 @@ a:hover {
 }
 
 .historybox {
+  display: block;
+  text-align: center;
   border: solid;
   border-color: black;
   border-width: thin;
