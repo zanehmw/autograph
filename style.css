@@ -104,3 +104,10 @@ a, a:visited {
 a:hover {
   background-color: #4d4d4d;
 }
+
+.historybox {
+  border: solid;
+  border-color: black;
+  border-width: thin;
+  margin: 15px;
+}

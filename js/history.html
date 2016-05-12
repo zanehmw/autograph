@@ -1,6 +1,6 @@
 <h1>SEARCH HISTORY</h1>
 
-<div data-ng-repeat="history in historyVm.histories">
+<div class="historybox"data-ng-repeat="history in historyVm.histories">
 
     <h2>{{history.carMake.toUpperCase()}} {{history.carModel.toUpperCase()}} within {{history.radius}} miles of {{history.zipCode}} zipcode </h2>
     <div data-ng-repeat="comment in history.comments">
