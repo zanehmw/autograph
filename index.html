@@ -9,6 +9,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <!-- I couldn't find where there is extra module is being implemented, if it's not used consider removing it -->
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
   <script src="js/app.js"></script>
@@ -22,11 +23,14 @@
   <script src="js/graph.directive.js"></script>
 
   <link rel="stylesheet" href="style.css">
+  <!-- Since the root of the app is /autograph/ the base should reflect that
+  (zanehmw.github.io/autograph/)-->
   <base href="/">
 
 </head>
 <body data-ng-app="carGraphingApp">
   <div class="logo">
+    <!-- Try to avoid using inline styles, also there is weird indentation here -->
      <img style="height:10vh;" src="http://i.imgur.com/PC31dWU.png?1" alt="">
    </div>
   <ul>

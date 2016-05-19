@@ -34,6 +34,7 @@
         url += "&paginationInput.entriesPerPage=100";
 
         return $http.jsonp(url).then(function(res){
+          // it would help the readability to extract this callback into a named function and call it here
           var carInfo = res.data;
           var cars = carInfo.findItemsByKeywordsResponse[0].searchResult[0].item || [];
           var urlList = '&itemID=';
@@ -41,6 +42,7 @@
           var resultsArray = [];
 
           for(var i=0; i < loopCount; i++) {
+            // the contents of this for loop could also be broken into a separate named function and called here
             urlList = '&itemID=';
 
             for(var j=0; j < 20; j++){
