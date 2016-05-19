@@ -31,6 +31,7 @@
         controller: "historyController",
         controllerAs: "historyVm"
       })
+      // see comment in show controller
       .state("carShow", {
         url: "/show",
         templateUrl: "autograph/js/show.html",

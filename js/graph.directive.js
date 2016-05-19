@@ -86,6 +86,7 @@
           })
         }
 
+        // weird indentation
   searchVm.GraphData()
       }
     }

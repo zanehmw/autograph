@@ -12,9 +12,12 @@
   function SearchControllerFunction($scope, DatabaseFactory, SearchFactory){
     var searchVm = this;
     this.searchTerms = new DatabaseFactory();
+    console.log(searchVm.chart);
 
     searchVm.onRefresh = function(newData, maxP, maxM){
       var chart = $('.container').highcharts();
+      console.log(chart);
+      console.log(document.getElementsByClassName('container'));
       var cleanData = [];
       for(var i=0; i<newData.length; i++){
         var newY = (maxP - newData[i].y);
@@ -23,6 +26,10 @@
       var compareFunc = function(a, b){
         return (a[0]-b[0]);
       }
+      // Typically it's nice to include the author and a link to the original
+      // codebase for borrowed/adapted code - https://github.com/Tom-Alexander/regression-js/
+      // you could then remove
+      // the 'highcharts-regression-master' directory
       var logarithmic = function(lData) {
         var sum = [0, 0, 0, 0];
         var results = [];
@@ -65,6 +72,7 @@
 
       SearchFactory.sendData(this.searchTerms)
       .then(function(res){
+        // this function is 39 lines long, it would benefit from be broken up into small helper functions
         searchVm.cars = [];
         searchVm.maxMileage = 0;
         searchVm.maxPrice = 0;
@@ -75,6 +83,8 @@
             if (searchVm.rawCars[i].ItemSpecifics){
               var toParse = searchVm.rawCars[i].ItemSpecifics.NameValueList;
               searchVm.c = {}
+              // The vanilla js method .filter() could be used instead of relying on jQuery https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+              //  vs http://api.jquery.com/jquery.grep/
               jQuery.grep(toParse, function(n){
                 if (n.Name == "Make") {searchVm.c.model = n.Value[0];}
                 if (n.Name == "Model") {searchVm.c.make = n.Value[0];}

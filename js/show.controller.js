@@ -1,6 +1,7 @@
 "use strict";
 
 (function(){
+  // this controller isn't being used at all. I'd suggest creating a branch with git (something like 'show-view'), and removing this controller, state, and template from this branch. That way you still have access to this code on that branch if you decide to go back and fix this feature, and it won't be clogging up your production code with non-function features.
   angular
   .module("carGraphingApp")
   .controller("carShowController", [
@@ -11,6 +12,7 @@
 
   function carShowControllerFunction(SearchFactory, $http) {
     var carShowVm = this;
+    // this ShowFactory is not defined anywhere
     ShowFactory
     .then(function(res){
       carShowVm.cars = [];
