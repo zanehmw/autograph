@@ -78,8 +78,9 @@ input {
   line-height: 15.4px;
 }
 
-.searchbox input {
-  width: 90%;
+.searchbox input,
+.searchbox button {
+  width: 85%;
 }
 
 .graph {
