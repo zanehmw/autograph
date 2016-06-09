@@ -61,10 +61,14 @@ ul {
   height: 50px;
 }
 
-.searchpage {
-  display: inline-block;
+.main {
   width: 90%;
   margin: 10px auto;
+}
+
+.searchpage {
+  display: inline-block;
+  width: 100%;
 }
 
 .searchbox {
