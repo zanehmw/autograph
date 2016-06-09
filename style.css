@@ -96,11 +96,14 @@ button {
   margin: 5px 0;
 }
 
-car-graph {
+.graph {
   float: left;
   width: 69%;
+}
+
+.container {
   min-width: 310px;
-  height: 400px
+  height: 400px;
 }
 
 .searched {
