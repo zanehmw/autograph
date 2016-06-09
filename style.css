@@ -76,7 +76,7 @@ ul {
   font-style: normal;
   font-weight: 500;
   line-height: 15.4px;
-  width: 31%;
+  width: 30%;
 }
 
 .searchbox input {
@@ -96,8 +96,7 @@ button {
 
 .graph {
   float: left;
-  width: 68%;
-  /*margin-right: 10px;*/
+  width: 65%;
   min-width: 310px;
   height: 400px
 }
