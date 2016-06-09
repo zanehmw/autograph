@@ -80,10 +80,12 @@ ul {
 }
 
 .searchbox input {
+  width: 100%;
   max-width: 180px;
 }
 
 .searchbox button {
+  width: 100%;
   max-width: 204px;
 }
 
