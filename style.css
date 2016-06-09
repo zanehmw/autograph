@@ -59,6 +59,7 @@ ul {
   font-size: 20px;
   margin: 15px;
   width: 86.9%;
+  height: 55px;
 }
 
 .searchpage {
@@ -93,9 +94,9 @@ button {
 
 .graph {
   float: left;
-  width: 70%;
+  width: 68%;
   margin-right: 10px;
-  min-width: 310px; 
+  min-width: 310px;
   height: 400px
 }
 
