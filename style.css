@@ -49,14 +49,14 @@ li {
   display: inline-block;
   padding: 20px;
   margin: 0 auto;
-  margin-bottom: 5px;
 }
 
 ul {
   text-align: center;
   background-color: #dddddd;
   font-size: 20px;
-  margin: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
   width: 86.9%;
   height: 55px;
 }
