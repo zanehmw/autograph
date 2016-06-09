@@ -69,16 +69,6 @@
           min: 0,
           max: 200000
         },
-        // legend: {
-        //     layout: 'vertical',
-        //     align: 'left',
-        //     verticalAlign: 'top',
-        //     x: 100,
-        //     y: 70,
-        //     floating: true,
-        //     backgroundColor: '#FFFFFF',
-        //     borderWidth: 1
-        // },
         plotOptions: {
           scatter: {
             marker: {

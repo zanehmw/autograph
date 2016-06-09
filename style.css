@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-color: solid white;
+  background-color: white;
 }
 
 h1, h2, h3, p {
@@ -15,16 +15,17 @@ h1, h2, h3, p {
   font-weight: 500;
   line-height: 15.4px;
 }
-  h1, h2, h3 {
-    font-size: 20px;
-  }
-  h3 {
-    color: purple;
-  }
 
-  p {
-    font-size: 18px;
-  }
+h1, h2, h3 {
+  font-size: 20px;
+}
+h3 {
+  color: purple;
+}
+
+p {
+  font-size: 18px;
+}
 
 li {
   display: inline;
@@ -146,4 +147,9 @@ a:hover {
 
 input {
   font-size: .9em;
+}
+
+.info {
+  margin-left: 20px;
+  width: 86.9%;
 }
