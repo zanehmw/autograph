@@ -103,9 +103,13 @@ a, a:visited {
 
 .logo {
  text-align: center;
- margin:0 auto;
- height:8vh;
+ margin: 0 auto;
+ height: 10vh;
 };
+
+.logo img {
+  height: 100%;
+}
 
 a:hover {
   background-color: #4d4d4d;
