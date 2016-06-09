@@ -58,11 +58,13 @@ ul {
   padding-bottom: 10px;
   margin: 5px auto;
   width: 86.9%;
-  height: 55px;
+  height: 50px;
 }
 
 .searchpage {
   display: inline;
+  width: 86.9%;
+  margin: 0 auto;
 }
 
 .searchbox {
@@ -74,14 +76,15 @@ ul {
   font-style: normal;
   font-weight: 500;
   line-height: 15.4px;
+  width: 31%;
 }
 
 .searchbox input {
-  width: 180px;
+  max-width: 180px;
 }
 
 .searchbox button {
-  width: 204px;
+  max-width: 204px;
 }
 
 input,
@@ -94,7 +97,7 @@ button {
 .graph {
   float: left;
   width: 68%;
-  margin-right: 10px;
+  /*margin-right: 10px;*/
   min-width: 310px;
   height: 400px
 }
@@ -142,7 +145,7 @@ button {
 }
 
 .teampic img {
-  height: 300px;
+  max-height: 300px;
   padding: 0;
   border-radius: 50%;
   border-color: black;
