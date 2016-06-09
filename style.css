@@ -68,7 +68,7 @@ ul {
 }
 
 .searchbox {
-  margin: 0px 10px 10px 10px;
+  margin: 10px 0;
   float: left;
   display: inline-block;
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
