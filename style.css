@@ -42,11 +42,6 @@ ul {
   width: 86.9%;
 }
 
-/*li img {
-  margin: auto 20px;
-  height: 30px;
-}*/
-
 button {
   padding: 10px;
   font-size: 15px;
@@ -104,7 +99,7 @@ a, a:visited {
 .logo {
   display: block;
   margin: 0 auto;
-  height: 10%;
+  height: 5%;
 }
 
 a:hover {
