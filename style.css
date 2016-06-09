@@ -112,7 +112,7 @@ button {
   border-style: solid;
   border-width: 1px;
   border-color:gray;
-  margin: 20px 20px 40px 20px;
+  margin: 20px auto 40px auto;
   padding:5px;
   width:91.5%;
 }
@@ -138,11 +138,15 @@ button {
   width: 86.9%;
 }
 
+.teampic {
+  margin: 0 auto;
+}
+
 .teampic img {
   height: 300px;
-  margin: 0 auto;
   padding: 0;
   border-radius: 50%;
   border-color: black;
   border: thin;
+  width: 32%;
 }
