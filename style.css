@@ -1,7 +1,7 @@
-html {
+/*html {
  margin-left:10vw;
  margin-right:10vw;
-}
+}*/
 
 body {
   background-color: white;
@@ -81,12 +81,12 @@ ul {
 
 .searchbox input {
   width: 100%;
-  max-width: 180px;
+  /*max-width: 180px;*/
 }
 
 .searchbox button {
   width: 100%;
-  max-width: 204px;
+  /*max-width: 204px;*/
 }
 
 input,
