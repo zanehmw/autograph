@@ -66,9 +66,12 @@ ul {
   line-height: 15.4px;
 }
 
-.searchbox input,
+.searchbox input {
+  width: 180px;
+}
+
 .searchbox button {
-  width: 195px;
+  width: 200px;
 }
 
 input,
