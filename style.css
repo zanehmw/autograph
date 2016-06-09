@@ -104,11 +104,7 @@ a, a:visited {
 .logo {
  text-align: center;
  margin: 0 auto;
- height: 5%;
-};
-
-.logo img {
-  height: 50%;
+ height: 10%;
 }
 
 a:hover {
