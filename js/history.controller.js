@@ -12,16 +12,17 @@
   ]);
 
   function ControllerFunction(DatabaseFactory, $stateParams, $window, CommentFactory) {
-    this.histories = DatabaseFactory.query();
-    this.comments = CommentFactory.query();
+    var historyVm = this;
+    historyVm.histories = DatabaseFactory.query();
+    historyVm.comments = CommentFactory.query();
 
-    this.destroy = function(obj){
+    historyVm.destroy = function(obj){
       DatabaseFactory.delete({id: obj.id});
       window.location.reload();
     };
 
-    this.newcomment = new CommentFactory();
-    this.create = function(obj){
+    historyVm.newcomment = new CommentFactory();
+    historyVm.create = function(obj){
       this.newcomment.car_id = obj.id;
       this.newcomment.author = obj.author;
       this.newcomment.body = obj.body;

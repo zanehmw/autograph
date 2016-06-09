@@ -10,9 +10,9 @@
    </div>
 
    <form>
-     <input value="history.newcomment.author" data-ng-model="history.newcomment.author" placeholder="AUTHOR"/>
-     <input value="history.newcomment.body" data-ng-model="history.newcomment.body" placeholder="BODY" />
-     <button data-ng-click="historyVm.create({id: history.id, author: history.newcomment.author, body: history.newcomment.body})">Create Comment</button>
+     <input data-ng-model="history.comment.author" placeholder="AUTHOR"/>
+     <input data-ng-model="history.comment.body" placeholder="BODY" />
+     <button data-ng-click="historyVm.create({id: history.id, author: history.comment.author, body: history.comment.body})">Create Comment</button>
      <button class="deletebutton" data-ng-click="historyVm.destroy({id: history.id})">Delete This Search</button>
    </form>
 
