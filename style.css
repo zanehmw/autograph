@@ -47,11 +47,6 @@ button {
   font-size: 15px;
 }
 
-input {
-  padding: 10px;
-  font-size: 15px;
-  margin: 5px;
-}
 
 .teampic img {
   height: 300px;
@@ -73,7 +68,6 @@ input {
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-variant: normal;
   font-weight: 500;
   line-height: 15.4px;
 }
@@ -147,6 +141,9 @@ a:hover {
 
 input {
   font-size: .9em;
+  padding: 10px;
+  font-size: 15px;
+  margin: 5px;
 }
 
 .info {
