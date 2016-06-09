@@ -63,7 +63,8 @@ ul {
 
 .searchpage {
   display: inline-block;
-  width: 100%;
+  width: 90%;
+  margin: 10px auto;
 }
 
 .searchbox {
