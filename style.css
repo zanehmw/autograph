@@ -99,7 +99,7 @@ a, a:visited {
 .logo {
   display: block;
   margin: 0 auto;
-  height: 40px;
+  max-height: 40px;
 }
 
 a:hover {
