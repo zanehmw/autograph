@@ -27,7 +27,6 @@ p {
 a, a:visited {
   text-decoration: none;
   color: black;
-  margin-bottom: 5px;
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -48,13 +47,13 @@ a:hover {
 
 li {
   display: inline-block;
+  padding: 20px;
   margin: 0 auto;
 }
 
 ul {
   text-align: center;
   background-color: #dddddd;
-  padding: 15px;
   font-size: 20px;
   margin: 15px;
   width: 86.9%;
