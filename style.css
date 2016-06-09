@@ -102,9 +102,9 @@ a, a:visited {
 }
 
 .logo {
- text-align: center;
- margin: 0 auto;
- height: 10%;
+  display: block;
+  margin: 0 auto;
+  height: 10%;
 }
 
 a:hover {
