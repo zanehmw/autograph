@@ -98,7 +98,7 @@ button {
 
 .graph {
   float: left;
-  width: 70%;
+  /*width: 70%;*/
   min-width: 310px;
   height: 400px
 }
