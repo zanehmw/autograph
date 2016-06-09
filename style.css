@@ -110,10 +110,26 @@ a:hover {
   background-color: #4d4d4d;
 }
 
-.commentbox ul {
-  background-color: solid white;
+.commentbox{
+  border-style: solid;
+  border-width: 1px;
+  border-color:gray;
+  margin: 20px 20px 40px 20px;
+  padding:5px;
+  width:91.5%;
 }
+
+.searched {
+  margin: 10px;
+  padding: 10px;
+  font-size:1.5em;
+  background-color: rgb(238, 238, 238);
+  width:91.5%;
+  text-align:center;
+}
+
 .comment, .author {
+  padding: 0 0 0 20px;
   text-align: center;
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 13px;
@@ -121,7 +137,13 @@ a:hover {
   font-variant: normal;
   font-weight: 500;
   line-height: 15.4px;
+  font-size:.9em;
 }
+
 .author {
   color: purple;
+}
+
+input {
+  font-size: .9em;
 }

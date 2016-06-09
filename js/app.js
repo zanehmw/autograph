@@ -31,12 +31,6 @@
         controller: "historyController",
         controllerAs: "historyVm"
       })
-      .state("carShow", {
-        url: "/show",
-        templateUrl: "autograph/js/show.html",
-        controller: "carShowController",
-        controllerAs: "carShowVm"
-      });
 
       $urlRouterProvider
       .otherwise("/");
