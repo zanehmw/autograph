@@ -11,7 +11,7 @@
 
    <form>
      <input data-ng-model="history.comment.author" placeholder="AUTHOR"/>
-     <input data-ng-model="history.comment.body" placeholder="BODY" />
+     <input data-ng-model="history.comment.body" placeholder="COMMENT" />
      <button data-ng-click="historyVm.create({id: history.id, author: history.comment.author, body: history.comment.body})">Create Comment</button>
      <button class="deletebutton" data-ng-click="historyVm.destroy({id: history.id})">Delete This Search</button>
    </form>
