@@ -66,7 +66,7 @@ input {
   display: inline;
 }
 
-.searchbox{
+.searchbox {
   margin: 0px 10px 10px 10px;
   float: left;
   display: inline-block;
@@ -76,6 +76,10 @@ input {
   font-variant: normal;
   font-weight: 500;
   line-height: 15.4px;
+}
+
+.searchbox input {
+  width: 90%;
 }
 
 .graph {
@@ -142,7 +146,6 @@ a:hover {
 
 input {
   font-size: .9em;
-  width: 100%
 }
 
 .info {
