@@ -42,12 +42,6 @@ ul {
   width: 86.9%;
 }
 
-button {
-  padding: 10px;
-  font-size: 15px;
-}
-
-
 .teampic img {
   height: 300px;
   margin: 0 auto;
@@ -75,6 +69,13 @@ button {
 .searchbox input,
 .searchbox button {
   width: 195px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 15px;
+  margin: 5px;
 }
 
 .graph {
@@ -137,14 +138,6 @@ a:hover {
 
 .author {
   color: purple;
-}
-
-input,
-button {
-  font-size: .9em;
-  padding: 10px;
-  font-size: 15px;
-  margin: 5px;
 }
 
 .info {
