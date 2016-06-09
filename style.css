@@ -7,11 +7,6 @@ body {
   background-color: white;
 }
 
-.clearfix {
-  overflow: auto;
-  zoom: 1;
-}
-
 h1, p {
   color: black
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
@@ -67,7 +62,7 @@ ul {
 }
 
 .searchpage {
-  display: inline;
+  display: inline-block;
   width: 90%;
 }
 
