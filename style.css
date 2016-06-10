@@ -1,14 +1,13 @@
 html {
- margin-left:10vw;
- margin-right:10vw;
+ margin-left:10%;
+ margin-right:10%;
 }
 
 body {
-  background-color: solid white;
-
+  background-color: white;
 }
 
-h1, h2, h3, p {
+h1, p {
   color: black
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-style: normal;
@@ -16,65 +15,18 @@ h1, h2, h3, p {
   font-weight: 500;
   line-height: 15.4px;
 }
-  h1, h2, h3 {
-    font-size: 20px;
-  }
-  h3 {
-    color: purple;
-  }
 
-  p {
-    font-size: 18px;
-  }
-
-li {
-  display: inline;
-  padding: 20px;
-  margin: 0 auto;
-}
-
-ul {
-  text-align: center;
-  background-color: #dddddd;
-  padding: 15px;
+h1 {
   font-size: 20px;
-  margin: 15px;
-  width: 86.9%;
 }
 
-li img {
-  margin: auto 20px;
-  height: 30px;
+p {
+  font-size: 18px;
 }
 
-button {
-  padding: 10px;
-  font-size: 15px;
-}
-
-input {
-  padding: 10px;
-  font-size: 15px;
-  margin: 5px;
-}
-
-.teampic img {
-  height: 300px;
-  margin: 0 auto;
-  padding: 0;
-  border-radius: 50%;
-  border-color: black;
-  border: thin;
-}
-
-.searchpage {
-  display: inline;
-}
-
-.searchbox{
-  margin: 0px 10px 10px 10px;
-  float: left;
-  display: inline-block;
+a, a:visited {
+  text-decoration: none;
+  color: black;
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -83,37 +35,100 @@ input {
   line-height: 15.4px;
 }
 
-.graph {
-  float: left;
-  width: 70%;
-  margin-right: 10px;
-}
-
-a, a:visited {
-  text-decoration: none;
-  color: black;
-  margin-bottom: 5px;
-  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 15.4px;
-}
-
-.logo {
- text-align: center;
- margin:0 auto;
- height:8vh;
-};
-
 a:hover {
   background-color: #4d4d4d;
 }
 
-.commentbox ul {
-  background-color: solid white;
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-height: 65px;
 }
+
+li {
+  display: inline-block;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+ul {
+  text-align: center;
+  background-color: #dddddd;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin: 5px auto;
+  width: 90%;
+  height: 50px;
+}
+
+.main {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.searchpage {
+  display: inline-block;
+  width: 100%;
+}
+
+.searchbox {
+  margin: 10px 0;
+  float: left;
+  display: inline-block;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+  width: 30%;
+}
+
+.searchbox input {
+  width: 100%;
+  max-width: 180px;
+}
+
+.searchbox button {
+  width: 100%;
+  max-width: 204px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.graph {
+  float: left;
+  width: 69%;
+}
+
+.container {
+  width: 100%;
+  min-width: 310px;
+  height: 400px;
+}
+
+.searched {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: rgb(238, 238, 238);
+  width: 91.5%;
+  text-align: center;
+}
+
+.commentbox{
+  border-style: solid;
+  border-width: 1px;
+  border-color:gray;
+  margin: 20px auto 40px auto;
+  padding:5px;
+  width:91.5%;
+}
+
 .comment, .author {
   text-align: center;
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
@@ -122,9 +137,29 @@ a:hover {
   font-variant: normal;
   font-weight: 500;
   line-height: 15.4px;
+  font-size:.9em;
 }
+
 .author {
   color: purple;
+}
+
+.info {
+  margin-left: 20px;
+  width: 86.9%;
+}
+
+.teampic {
+  margin: 0 auto;
+}
+
+.teampic img {
+  max-height: 300px;
+  padding: 0;
+  border-radius: 50%;
+  border-color: black;
+  border: thin;
+  width: 32%;
 }
 
 .loading {

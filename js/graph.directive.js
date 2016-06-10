@@ -24,7 +24,6 @@
               zoomType: 'xy'
             },
             title: {text: ''},
-            // subtitle: {text: 'Ebay search results'},
             xAxis: {
               title: {
                 enabled: true,
@@ -85,8 +84,7 @@
             }]
           })
         }
-
-  searchVm.GraphData()
+      searchVm.GraphData()
       }
     }
   })

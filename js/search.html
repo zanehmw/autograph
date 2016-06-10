@@ -1,11 +1,12 @@
 <div class="searchpage">
-  <div class="searchbox">
-    <form data-ng-model="searchbox">
-      <input style="margin:0px 5px 5px 5px" placeholder="MAKE" data-ng-model="searchVm.searchTerms.carMake" /><br>      <input placeholder="MODEL" data-ng-model="searchVm.searchTerms.carModel" /><br>
-      <input placeholder="ZIPCODE" data-ng-model="searchVm.searchTerms.zipCode" /><br>
-      <input placeholder="SEARCH RADIUS" data-ng-model="searchVm.searchTerms.radius" /><br>
-      <button style="margin:5px 5px 5px 5px; width:190px;" type="submit" data-ng-click="searchVm.search()">SEARCH</button>    </form>
-  </div>
+
+  <form class="searchbox">
+    <input placeholder="MAKE" data-ng-model="searchVm.searchTerms.carMake" /><br>
+    <input placeholder="MODEL" data-ng-model="searchVm.searchTerms.carModel" /><br>
+    <input placeholder="ZIPCODE" data-ng-model="searchVm.searchTerms.zipCode" /><br>
+    <input placeholder="SEARCH RADIUS" data-ng-model="searchVm.searchTerms.radius" /><br>
+    <button type="submit" data-ng-click="searchVm.search()">SEARCH</button>
+  </form>
 
   <div class="graph">
     <car-graph control="searchController"></car-graph>
