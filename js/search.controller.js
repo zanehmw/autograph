@@ -104,6 +104,7 @@
         }
       })
       .then(function(){
+        document.getElementsByClassName('loading')[0].style.display= 'none';
         searchVm.onRefresh(searchVm.cars, searchVm.maxPrice, searchVm.maxMileage)
       })
     }

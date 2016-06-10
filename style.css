@@ -161,3 +161,16 @@ button {
   border: thin;
   width: 32%;
 }
+
+.loading {
+  position: fixed;
+  z-index: 100;
+  top: 38%;
+  left: 42%;
+  width: 50%;
+  margin-left: 10%;
+  display: none;
+  width: 100px;
+  height: 100px;
+  font-size:2em;
+}
